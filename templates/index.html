@@ -1,6 +1,48 @@
 <html>
-    <head><title>Frontend Home</title></head>
+    <head>
+        <title>Frontend Home</title>
+        <style>
+            body {
+              background-color: white;
+              text-align: center;
+            }
+
+            .button {
+              background-color: #4CAF50; /* Green */
+              border: none;
+              color: white;
+              padding: 8px 16px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              transition-duration: 0.4s;
+              cursor: pointer;
+            }
+
+            .button1 {
+              background-color: #4CAF50;
+              color: black;
+              border: .05px solid #000000;
+            }
+
+            .button1:hover {
+              background-color: #4CAF50;
+              color: white;
+            }
+
+            div#video_player_box{ width:550px; background:#000; margin:0px auto;}
+            div#video_controls_bar{ background: #333; padding:10px; color:#CCC;}
+            input#seekslider{ width:180px; }
+            input#volumeslider{ width: 80px;}
+
+        </style>
+    </head>
     <body>
+        <button style="float:left" onclick="location.href='https://www.google.com';" class="button button1">AnoidApps</button>
+        <iframe width="0" height="0" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br/>
         Hello World
     </body>
 </html>
