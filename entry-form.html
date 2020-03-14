@@ -45,19 +45,24 @@
             </div>
             <div class="form-group">
                 <label for="chkUnpaidBreaks">Unpaid breaks?</label><br/>
-                <input id="chkUnpaidBreaks" type='checkbox' style="text-align: left" />
+                <input id="chkUnpaidBreaks" type='checkbox' style="margin-left: 5px" />
             </div>
             <div class="form-group">
-                <label for="txtBreatkLength">Break Length (minutes)</label>
+                <label for="txtBreatkLength">Break Length</label><br/>
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown button
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Select total break time
+                      <span class="caret"></span>
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#">15 minutes</a></li>
+                      <li><a href="#">30 minutes</a></li>
+                      <li><a href="#">45 minutes</a></li>
+                      <li><a href="#">1 hour</a></li>
+                      <li><a href="#">1 hour and 30 minutes</a></li>
+                      <li><a href="#">1 hour and 45 minutes</a></li>
+                      <li><a href="#">2 hours</a></li>
+                    </ul>
                   </div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
