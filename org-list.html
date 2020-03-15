@@ -11,17 +11,30 @@
       <script src="js/bootstrap.min.js"></script>
       <script src="js/api.js"></script>
       <script type="text/javascript">
-        api.getOrg(1, function(response){
-          document.getElementById("container").innerHTML = response;
-        })
+        $( document ).ready(function() {
+            console.log( "ready!" );
+            api.getOrgs(function(response){
+              console.log(response)
+              var orgs = JSON.parse(response);
+              var html = "";
+              console.log("orgs.length", orgs.length);
+              for(var i=0; i<orgs.length; i++){
+                html += "<div>"+orgs[i].org_id+" : " + orgs[i].name+"</div>";
+              }
+              
+              document.getElementById("container").innerHTML = html;
+            });
+        });
+        
       </script>
     </head>
     <body>
       <div class="header">
         <span class="header-title">Time Clock</span>
       </div>
+      <h3>Organizations</h3>
       <div class="container-fluid" id="container">
-        
       </div>
+      <button>Add New</button>
     </body>
 </html>

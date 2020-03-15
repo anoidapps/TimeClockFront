@@ -1,6 +1,6 @@
 var api = {
 
-    apiAddress: "http://localhost:5000",
+    apiAddress: "http://192.168.1.121:5000",
 
     apiCall: function (url, method, data, callback){
         $.ajax({
@@ -25,37 +25,38 @@ var api = {
     
     createUser: function(user, callback){
         var url = this.apiAddress + "/users"
-        apiCall(url, "POST", org, callback);
+        this.apiCall(url, "POST", org, callback);
     },
     
     updateUser: function(user, callback){
         var url = this.apiAddress + "/users/"+user.userId;
-        apiCall(url, "POST", org, callback);
+        this.apiCall(url, "POST", org, callback);
     },
     
     getUser: function(userId, callback){
         var url = this.apiAddress + "/users/" + userId;
-        apiCall(url, "GET", callback);
+        this.apiCall(url, "GET", callback);
     },
     
     getUsers: function(orgId, callback){
         var url = this.apiAddress + "/users"
-        apiCall(url, "GET", callback);
+        this.apiCall(url, "GET", callback);
     },
     
     createOrg: function(org, callback){
         var url = this.apiAddress + "/orgs"
-        apiCall(url, "POST", org, callback);
+        this.apiCall(url, "POST", org, callback);
     },
     
     getOrg: function(orgId, callback){
-        var url = this.apiAddress + "/orgs/" + orgId;
-        apiCall(url, "GET", callback);
+        var url = this.apiAddress + "/organizations/" + orgId;
+        this.apiCall(url, "GET", callback);
     },
     
     getOrgs: function(callback){
-        var url = this.apiAddress + "/orgs";
-        apiCall(url, "GET", callback);
+        console.log("getOrgs");
+        var url = this.apiAddress + "/organizations";
+        this.apiCall(url, "GET", callback);
     }
 
 }
