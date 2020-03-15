@@ -17,7 +17,7 @@
               console.log(response)
               var orgs = JSON.parse(response);
               var html = "";
-              console.log("orgs.length", orgs.length);
+              console.log("orgs.length" + orgs.length);
               for(var i=0; i<orgs.length; i++){
                 html += "<div>"+orgs[i].org_id+" : " + orgs[i].name+"</div>";
               }
@@ -35,6 +35,6 @@
       <h3>Organizations</h3>
       <div class="container-fluid" id="container">
       </div>
-      <button>Add New</button>
+      <a href="org-form.html"><button>Add New</button></a>
     </body>
 </html>
