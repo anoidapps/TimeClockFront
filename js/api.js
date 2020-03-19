@@ -1,5 +1,6 @@
 var api = {
 
+    //Change this IP address to whereever your flask app is running
     apiAddress: "http://192.168.1.121:5000",
 
     apiCallSend: function (url, method, data, callback){
