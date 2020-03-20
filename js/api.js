@@ -33,7 +33,7 @@ var api = {
     
     updateUser: function(user, callback){
         var url = this.apiAddress + "/users/"+user.userId;
-        this.apiCallSend(url, "POST", org, callback);
+        this.apiCallSend(url, "PUT", org, callback);
     },
     
     getUser: function(userId, callback){
@@ -57,8 +57,37 @@ var api = {
     },
     
     getOrgs: function(callback){
-        console.log("getOrgs");
         var url = this.apiAddress + "/organizations";
+        this.apiCall(url, "GET", callback);
+    },
+
+    createJob: function(job, callback){
+        var url = this.apiAddress + "/jobs"
+        this.apiCallSend(url, "POST", job, callback);
+    },
+    
+    getJob: function(jobId, callback){
+        var url = this.apiAddress + "/jobs/" + jobId;
+        this.apiCall(url, "GET", callback);
+    },
+    
+    getJobs: function(orgId, callback){
+        var url = this.apiAddress + "/jobs?org-id="+orgId;
+        this.apiCall(url, "GET", callback);
+    },
+
+    createEntry: function(job, callback){
+        var url = this.apiAddress + "/entries"
+        this.apiCallSend(url, "POST", job, callback);
+    },
+    
+    getEntry: function(entryId, callback){
+        var url = this.apiAddress + "/entries/" + entryId;
+        this.apiCall(url, "GET", callback);
+    },
+    
+    getEntries: function(userId, callback){
+        var url = this.apiAddress + "/entries?user-id="+userId;
         this.apiCall(url, "GET", callback);
     }
 

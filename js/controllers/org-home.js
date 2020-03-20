@@ -7,7 +7,11 @@ $( document ).ready(function() {
         //call the api to get the org by id
         api.getOrg(orgId, function(response){
             var org = JSON.parse(response);
+            //set the org name
             document.getElementById("titleOrgName").innerHTML = org.name;
+            //set the org id on the button links
+            document.getElementById("btnJobs").setAttribute("href", "job-list.html?org-id="+orgId);
+            document.getElementById("btnUsers").setAttribute("href", "job-list.html?org-id="+orgId);
         });
     }
 
