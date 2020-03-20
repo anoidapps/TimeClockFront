@@ -10,24 +10,7 @@
       <script src="js/libs/jquery-3.4.1.min.js"></script>
       <script src="js/libs/bootstrap.min.js"></script>
       <script src="js/api.js"></script>
-      <script type="text/javascript">
-        $( document ).ready(function() {
-            console.log( "ready!" );
-            api.getOrgs(function(response){
-              console.log(response)
-              var orgs = JSON.parse(response);
-              var html = "<ul>";
-              console.log("orgs.length" + orgs.length);
-              for(var i=0; i<orgs.length; i++){
-                html += "<li><a href=\"org-home.html?org-id="+orgs[i].org_id+"\">" + orgs[i].name+"</a></li>";
-              }
-              html += "</ul>";
-              
-              document.getElementById("container").innerHTML = html;
-            });
-        });
-        
-      </script>
+      <script src="js/controllers/org-list.js"></script>
     </head>
     <body>
       <div class="header">
