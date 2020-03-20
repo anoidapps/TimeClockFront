@@ -11,7 +11,7 @@ $( document ).ready(function() {
             document.getElementById("titleOrgName").innerHTML = org.name;
             //set the org id on the button links
             document.getElementById("btnJobs").setAttribute("href", "job-list.html?org-id="+orgId);
-            document.getElementById("btnUsers").setAttribute("href", "job-list.html?org-id="+orgId);
+            document.getElementById("btnUsers").setAttribute("href", "user-list.html?org-id="+orgId);
         });
     }
 
