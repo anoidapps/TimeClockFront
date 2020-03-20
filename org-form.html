@@ -10,20 +10,8 @@
       <script src="js/jquery-3.4.1.min.js"></script>
       <script src="js/libs/jquery-3.4.1.min.js"></script>
       <script src="js/libs/bootstrap.min.js"></script>
-      <script type="text/javascript">
-        $( document ).ready(function() {
-            console.log( "ready!" );
-            $("#btnSubmit").click(function(){
-              var txt = document.getElementById("txtOrgName").value;
-              var org = {"name": txt};
-              console.log("createOrg: " + JSON.stringify(org));
-              api.createOrg(org, function(response){
-                console.log(response);
-                alert(response);
-              });
-            });
-        });
-      </script>
+      <script src="js/api.js"></script>
+      <script src="js/controllers/org-form.js"></script>
     </head>
     <body>
       <div class="header">
