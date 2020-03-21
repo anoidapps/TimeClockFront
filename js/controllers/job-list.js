@@ -4,6 +4,8 @@ $( document ).ready(function() {
     //get the org id from query parameter
     var orgId = util.getParameterByName("org-id");
     if(orgId){
+        //add org id to the button link
+        document.getElementById("btnAddJob").setAttribute("href", "job-form.html?org-id="+orgId);
         //get all jobs by org id on page load
         api.getJobs(orgId, function(response){
             console.log(response)
