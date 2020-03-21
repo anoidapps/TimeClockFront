@@ -17,6 +17,8 @@ $( document ).ready(function() {
             //show the list in the div placeholder
             document.getElementById("container").innerHTML = html;
         });
+
+        document.getElementById("btnAdd").setAttribute("href", "user-form.html?org-id="+orgId);
     }
 
 });

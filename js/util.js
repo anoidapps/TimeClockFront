@@ -7,5 +7,14 @@ var util = {
         if (!results) return null;
         if (!results[2]) return '';
         return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    },
+
+    randomStr: function(len) { 
+        var arr = '123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ!@#$%^&*';
+        var ans = ''; 
+        for (var i = len; i > 0; i--) { 
+            ans += arr[Math.floor(Math.random() * arr.length)]; 
+        } 
+        return ans; 
     }
 };
