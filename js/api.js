@@ -28,12 +28,12 @@ var api = {
     
     createUser: function(user, callback){
         var url = this.apiAddress + "/users"
-        this.apiCallSend(url, "POST", org, callback);
+        this.apiCallSend(url, "POST", user, callback);
     },
     
     updateUser: function(user, callback){
         var url = this.apiAddress + "/users/"+user.userId;
-        this.apiCallSend(url, "PUT", org, callback);
+        this.apiCallSend(url, "PUT", user, callback);
     },
     
     getUser: function(userId, callback){
@@ -42,7 +42,7 @@ var api = {
     },
     
     getUsers: function(orgId, callback){
-        var url = this.apiAddress + "/users"
+        var url = this.apiAddress + "/users?org-id="+orgId;
         this.apiCall(url, "GET", callback);
     },
     

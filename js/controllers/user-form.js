@@ -9,7 +9,6 @@ $( document ).ready(function() {
       var txtEmail = document.getElementById("txtEmail").value;
       var txtUsername = document.getElementById("txtUsername").value;
       var txtPassword = document.getElementById("spanTempPassword").innerHTML;
-      var txtSalt = util.randomStr(10);
       var txtFirstName = document.getElementById("txtFirstName").value;
       var txtLastName = document.getElementById("txtLastName").value;
       var txtPhone = document.getElementById("txtPhone").value;
@@ -18,7 +17,6 @@ $( document ).ready(function() {
         "email": txtEmail,
         "username": txtUsername, 
         "password": txtPassword, 
-        "salt": txtSalt, 
         "first_name": txtFirstName, 
         "last_name": txtLastName, 
         "phone": txtPhone, 
@@ -27,13 +25,12 @@ $( document ).ready(function() {
       };
       console.log("createUser: " + JSON.stringify(user));
       //call the api to create the job
-      /*
-      api.createJob(job, function(response){
+      api.createUser(user, function(response){
         console.log(response);
-        alert("Job has been created.");
+        alert("User has been created.");
         //redirect to the job list
-        window.location.replace("job-list.html?org-id="+orgId);
-      });*/
+        window.location.replace("user-list.html?org-id="+orgId);
+      });
 
     });
 
